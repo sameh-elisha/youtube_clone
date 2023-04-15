@@ -62,7 +62,18 @@ export default function VideoDetail() {
             lg: "70vh",
           }}
         >
-          <ReactPlayer url={`https://www.youtube.com/watch?v=${id}`} width='100%' height='100%' />
+          <ReactPlayer
+            url={`https://www.youtube.com/watch?v=${id}`}
+            width='100%'
+            height='100%'
+            config={{
+              file: {
+                attributes: {
+                  crossOrigin: true,
+                },
+              },
+            }}
+          />
         </Box>
 
         <Box display='inline-block' width={"100%"}>
