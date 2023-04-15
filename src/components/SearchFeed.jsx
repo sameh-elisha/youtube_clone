@@ -5,9 +5,13 @@ import Channel from "./Feed/Channel";
 import ReportGmailerrorredIcon from "@mui/icons-material/ReportGmailerrorred";
 export default function SearchFeed() {
   // recive q from url
-  const params = new URLSearchParams(window.location.search);
-  const keyWord = params.get("search_query") || "";
+  const url = window.location.href;
+  const keyWord = url.split("search_query=")[1];
+
+  console.log(keyWord);
+
   const [channels, setChannels] = useState([]);
+
   useEffect(() => {
     const fetchChannels = async (keyWord) => {
       if (keyWord === "") return;

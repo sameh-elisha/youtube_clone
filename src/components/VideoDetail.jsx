@@ -59,9 +59,8 @@ export default function VideoDetail() {
       <Box flex={9} marginX={2}>
         <Box
           height={{
-            xs: "20vh",
+            xs: "30vh",
 
-            sm: "30vh",
             md: "60vh",
             lg: "70vh",
           }}
@@ -81,25 +80,63 @@ export default function VideoDetail() {
         </Box>
 
         <Box display='inline-block' width={"100%"}>
-          <Typography variant='h5' sx={{ fontWeight: "bold", mt: 3, fontSize: "2.2rem" }}>
+          <Typography
+            variant='h6'
+            sx={{
+              fontWeight: "bold",
+              mt: 3,
+              fontSize: {
+                xs: "0.7rem",
+                lg: "1.2rem",
+              },
+            }}
+          >
             {video.items ? video.items[0].snippet.title : <Skeleton variant='text' width={210} />}
           </Typography>
           <Box display='flex' mt={1} justifyContent='space-between' alignContent={"center"} alignItems={"center"}>
             <Box display={"flex"} gap={1} alignContent='center' alignItems='center'>
               <Avatar src={channel.items ? channel.items[0].snippet.thumbnails.default.url : ""} />
               <Link to={`/channel/${channel.items ? channel.items[0].id : ""}`}>
-                <Typography variant='h6' sx={{ color: "text.secondary", fontSize: "1.2rem" }}>
+                <Typography
+                  variant='h6'
+                  sx={{
+                    color: "text.secondary",
+                    fontSize: {
+                      xs: "0.7rem",
+                      lg: "1.2rem",
+                    },
+                  }}
+                >
                   {video.items ? video.items[0].snippet.channelTitle : <Skeleton variant='text' width={210} />}
                 </Typography>
               </Link>
             </Box>
 
             <Stack direction='row' spacing={1} mr={7}>
-              <Typography variant='h6' sx={{ color: "text.secondary", fontSize: "1.2rem" }}>
+              <Typography
+                variant='h6'
+                sx={{
+                  color: "text.secondary",
+
+                  fontSize: {
+                    xs: "0.7rem",
+                    lg: "1.2rem",
+                  },
+                }}
+              >
                 {video.items ? formatNumber(video.items[0].statistics.viewCount) : <Skeleton variant='text' width={210} />} Views
               </Typography>
 
-              <Typography variant='h6' sx={{ color: "text.secondary", fontSize: "1.2rem" }}>
+              <Typography
+                variant='h6'
+                sx={{
+                  color: "text.secondary",
+                  fontSize: {
+                    xs: "0.7rem",
+                    lg: "1.2rem",
+                  },
+                }}
+              >
                 {video.items ? formatNumber(video.items[0].statistics.likeCount) : <Skeleton variant='text' width={210} />} Likes
               </Typography>
             </Stack>
