@@ -10,7 +10,7 @@ const App = () => {
   const theme = createTheme({
     palette: {
       // check if dark mode is enabled in local storage
-      mode: JSON.parse(localStorage.getItem("darkMode")) ? "dark" : "light",
+      mode: !JSON.parse(localStorage.getItem("darkMode")) ? "dark" : "light",
     },
   });
 
