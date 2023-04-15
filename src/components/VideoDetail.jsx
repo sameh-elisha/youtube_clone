@@ -59,7 +59,7 @@ export default function VideoDetail() {
       <Box flex={9} marginX={2}>
         <Box
           height={{
-            xs: "30vh",
+            xs: "25vh",
 
             md: "60vh",
             lg: "70vh",
@@ -86,8 +86,10 @@ export default function VideoDetail() {
               fontWeight: "bold",
               mt: 3,
               fontSize: {
-                xs: "0.7rem",
-                lg: "1.2rem",
+                xs: "1rem",
+                sm: "1.2rem",
+                md: "1.5rem",
+                lg: "1.7rem",
               },
             }}
           >
@@ -103,6 +105,8 @@ export default function VideoDetail() {
                     color: "text.secondary",
                     fontSize: {
                       xs: "0.7rem",
+                      sm: "0.9rem",
+                      md: "1rem",
                       lg: "1.2rem",
                     },
                   }}
@@ -120,6 +124,8 @@ export default function VideoDetail() {
 
                   fontSize: {
                     xs: "0.7rem",
+                    sm: "0.9rem",
+                    md: "1rem",
                     lg: "1.2rem",
                   },
                 }}
@@ -133,6 +139,8 @@ export default function VideoDetail() {
                   color: "text.secondary",
                   fontSize: {
                     xs: "0.7rem",
+                    sm: "0.9rem",
+                    md: "1rem",
                     lg: "1.2rem",
                   },
                 }}
@@ -143,6 +151,13 @@ export default function VideoDetail() {
           </Box>
         </Box>
       </Box>
+      <Box
+        sx={{
+          marginTop: {
+            xs: "2rem",
+          },
+        }}
+      ></Box>
 
       <Box
         flex={1}
