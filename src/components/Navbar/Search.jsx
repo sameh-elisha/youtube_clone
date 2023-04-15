@@ -6,7 +6,6 @@ import SearchIcon from "@mui/icons-material/Search";
 import Box from "@mui/material/Box";
 import { useNavigate } from "react-router-dom";
 import { Button } from "@mui/material";
-
 export default function Search() {
   const [search, setSearch] = React.useState("");
   const navigate = useNavigate();
@@ -47,7 +46,9 @@ export default function Search() {
           placeholder='Search'
           inputProps={{ "aria-label": "search" }}
           value={search}
-          onChange={(e) => setSearch(e.target.value)}
+          onChange={(e) => {
+            setSearch(e.target.value);
+          }}
         />
         <IconButton type='button' sx={{ p: "10px" }} aria-label='search'>
           <SearchIcon />

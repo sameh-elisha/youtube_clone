@@ -3,13 +3,13 @@ import React, { useEffect, useState } from "react";
 import { suggestVideo } from "../utils/fetchAPIs";
 import Channel from "./Feed/Channel";
 import ReportGmailerrorredIcon from "@mui/icons-material/ReportGmailerrorred";
+
 export default function SearchFeed() {
   // recive q from url
   const url = window.location.href;
-  const keyWord = url.split("search_query=")[1];
-
-  console.log(keyWord);
-
+  let keyWord = url.split("search_query=")[1];
+  // decode keyWord
+  keyWord = decodeURIComponent(keyWord);
   const [channels, setChannels] = useState([]);
 
   useEffect(() => {

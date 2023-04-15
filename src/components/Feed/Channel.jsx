@@ -26,7 +26,7 @@ export default function Channel({ data }) {
         <Stack
           direction={"column"}
           sx={{
-            height: 340,
+            height: 460,
             width: 340,
             cursor: "pointer",
             // make shadow with color background.paper
@@ -67,7 +67,7 @@ export default function Channel({ data }) {
     <Stack
       direction={"column"}
       sx={{
-        height: 440,
+        height: 460,
         width: 340,
 
         cursor: "pointer",
