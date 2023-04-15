@@ -8,8 +8,9 @@ export default function ChannelDetail() {
     if (num === undefined) return "";
     return num > 1000000 ? `${(num / 1000000).toFixed(1)}M` : num > 1000 ? `${(num / 1000).toFixed(1)}K` : `${num}`;
   };
+  const url = window.location.href;
+  const id = url.split("/").pop();
 
-  const id = window.location.pathname.split("/")[2];
   console.log(id);
 
   const [channel, setChannel] = React.useState({});

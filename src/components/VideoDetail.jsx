@@ -10,7 +10,11 @@ export default function VideoDetail() {
     return num > 1000000 ? `${(num / 1000000).toFixed(1)}M` : num > 1000 ? `${(num / 1000).toFixed(1)}K` : `${num}`;
   };
 
-  const id = window.location.pathname.split("/")[2];
+  // take url
+  const url = window.location.href;
+  // get id from url
+  const id = url.split("/").pop();
+  console.log(id);
   const [video, setVideo] = useState({});
   const [channel, setChannel] = useState({});
   const [relatedVideos, setRelatedVideos] = useState([]);
